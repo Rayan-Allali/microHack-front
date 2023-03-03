@@ -11,7 +11,8 @@ const register = () => {
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [role, setRole] = useState("Are you a ?");
+
+  const [role, setRole] = useState("Are you a  ?");
 
   const toggleDropdown = () => setIsOpen(!isOpen);
   const handleSubmit = (event) => {
