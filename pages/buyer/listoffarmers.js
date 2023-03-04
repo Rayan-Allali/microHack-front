@@ -6,7 +6,7 @@ import SideBar from '../../Components/Landing/layout/sideBar'
 function listOfFarmers() {
   return (
     <div className='flex w-full'>
-        <div><SideBar active={3}/></div>
+        <div><SideBar active={2}/></div>
         <main className='p-16 w-full overflow-auto h-[100vh]'>
       
       <div className='pb-12 mb-16'>
