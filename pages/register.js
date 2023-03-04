@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { BsFacebook } from "react-icons/bs";
 import { FcGoogle } from "react-icons/fc";
 import { RxCheckCircled } from "react-icons/rx";
-
+import { useRouter } from 'next/router';
 const register = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [stepIndex, setStepIndex] = useState(1);
   const [submitted, setSubmitted] = useState(false);
-
+  const router = useRouter();
   const [userName, setUserName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -18,9 +18,17 @@ const register = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
   };
-  const handleContinue = () =>
+  const handleContinue = () =>{
+  if(stepIndex === 2) {if(role === 'Farmer'){
+    router.push('/farmer')
+  }
+  else if(role === 'Wholesaler'){
+    router.push('/buyer')
+  }
+}
     setStepIndex(stepIndex < 2 ? stepIndex + 1 : stepIndex);
-
+    
+}
   return (
     <div className="flex h-screen w-full ">
       <div
@@ -90,11 +98,11 @@ const register = () => {
                   <a
                     onClick={() => {
                       setIsOpen(false);
-                      setRole("Holeseler");
+                      setRole("Wholesaler");
                     }}
                     className="block w-full px-4 py-2 text-gray-800 hover:bg-gray-200"
                   >
-                    Holeseler
+                    Wholesaler
                   </a>
                 </div>
               )}
@@ -104,7 +112,7 @@ const register = () => {
           )}
 
           <button
-            onClick={stepIndex <= 3 ? handleContinue : handleSubmit}
+            onClick={handleContinue }
             className="rounded-lg bg-auth-btn px-10 py-2 text-center text-xl text-white "
           >
             {stepIndex == 3 ? "Get Started" : "Continue"}

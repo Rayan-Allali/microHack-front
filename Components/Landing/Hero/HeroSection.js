@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from 'next/link'
 export default function Hero() {
   return (
     <div className="w-full overflow-hidden">
@@ -27,7 +27,7 @@ export default function Hero() {
       </p>
 
       <div className="bg-[#033323] max-w-[12vw] px-[2.5vw] py-[2vh] text-2xl text-white rounded-[1.2rem] text-center mt-[5vh] mx-auto">
-        Get Started
+        <Link href='/register'>Get Started</Link>
       </div>
 
       <div className="bg-[url('/Image-Hero.png')] h-[90vh] w-full bg-cover"></div>
