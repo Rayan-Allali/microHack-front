@@ -1,13 +1,13 @@
 import React from 'react'
-import SideBar from '../../Components/Landing/layout/sideBar'
+import SideBar2 from '../../Components/Landing/layout/sideBar2'
 import Card from '../../Components/card'
 import Title from '../../Components/titleSection'
-import Potato from '../../public/Assets/potato.png'
+import Potato from '../../public/Assets/potato2.png'
 
 export default function myproducts() {
   return (
     <div className='flex w-full'>
-        <div className='max-h-[100vh]'><SideBar active={1} type={true}/> </div>
+        <div className='max-h-[100vh]'><SideBar2 active={1}/> </div>
         <div className='w-full overflow-auto h-[100vh] p-10 flex justify-between '>
             <div>
             <Title title='My Products' subTitle='Vous pouvez contrôler les publications ici !' />

@@ -7,7 +7,7 @@ import Filtrage from '../../Components/filtrage'
 export default function Product() {
   return (
         <div className='flex w-full'>
-        <div className='max-h-[100vh]'><SideBar active={2} type={false}/> </div>
+        <div className='max-h-[100vh]'><SideBar active={1}/> </div>
         <div className='w-full overflow-auto h-[100vh]'>
             <div>
             <Title title='Products' subTitle='' />

@@ -2,7 +2,7 @@ import React from 'react'
 import Logo from './../../../public/Assets/logo.jpg'
 import Link from 'next/link'
 import {BiLogIn} from 'react-icons/bi'
-export default function SideBar({active}) {
+export default function SideBar2({active}) {
   return (
     <div className='w-[180px] bg-white h-[100vh]'>
         <div className='w-full flex flex-col justify-between h-full'>
@@ -10,10 +10,10 @@ export default function SideBar({active}) {
                 <div className='w-full p-4'> <img className="w-full" src={Logo.src} alt="logo" /></div>
                 <div className="py-4 mt-8 flex flex-col justify-between">
                     <ul className="flex flex-col gap-2">
-                        <Link href='/buyer' ><li className={`${active === 0 && 'bg-[#4BA064] text-white'} text-lg p-2 px-6`}>General</li></Link>
-                        <Link href='/buyer/products' ><li className={`${active === 1 && 'bg-[#4BA064] text-white'} text-lg p-2 px-6`}>Products</li></Link>
-                        <Link href='/buyer/listoffarmers' ><li className={`${active === 2 && 'bg-[#4BA064] text-white'} text-lg p-2 px-6`}>List of Farmers</li></Link>
-                        <Link href='/buyer/settings' ><li className={`${active === 3 && 'bg-[#4BA064] text-white'} text-lg p-2 px-6`}>Settings</li></Link>
+                        <Link href='/farmer' ><li className={`${active === 0 && 'bg-[#4BA064] text-white'} text-lg p-2 px-6`}>General</li></Link>
+                        <Link href='/farmer/myproducts' ><li className={`${active === 1 && 'bg-[#4BA064] text-white'} text-lg p-2 px-6`}>My products</li></Link>
+                        <Link href='/farmer/advices' ><li className={`${active === 2 && 'bg-[#4BA064] text-white'} text-lg p-2 px-6`}>Advices</li></Link>
+                        <Link href='/farmer/settings' ><li className={`${active === 3 && 'bg-[#4BA064] text-white'} text-lg p-2 px-6`}>Settings</li></Link>
                     </ul>
                 </div>
             </div>

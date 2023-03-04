@@ -1,10 +1,10 @@
 import React from 'react'
-import SideBar2 from '../../Components/Landing/layout/sideBar2'
+import SideBar from '../../Components/Landing/layout/sideBar'
 import Map from './../../public/Assets/map.png'
 export default function Container({title,subTitle}) {
   return (
     <div className='flex w-full'>
-        <div className='max-h-[100vh]'><SideBar2 active={0}/></div>
+        <div className='max-h-[100vh]'><SideBar active={0} /></div>
         <div className='p-10 flex justify-between w-full overflow-auto h-[100vh]'>
             <div className="">
                 <h1 className='text-[24px] font-bold pb-2'>{title}</h1>

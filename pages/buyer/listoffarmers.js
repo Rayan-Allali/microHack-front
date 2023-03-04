@@ -1,10 +1,13 @@
 import React from 'react'
 import HeaderRow from '../../Components/HeaderRow'
 import Row from '../../Components/Row/index'
+import SideBar from '../../Components/Landing/layout/sideBar'
 
 function listOfFarmers() {
   return (
-    <main className='p-16 w-full'>
+    <div className='flex w-full'>
+        <div><SideBar active={3}/></div>
+        <main className='p-16 w-full overflow-auto h-[100vh]'>
       
       <div className='pb-12 mb-16'>
 
@@ -28,6 +31,7 @@ function listOfFarmers() {
       </div>
       
     </main>
+    </div>
   )
 }
 
