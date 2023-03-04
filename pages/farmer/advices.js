@@ -1,9 +1,9 @@
 import React from 'react'
-
+import SideBar from '../../Components/Landing/layout/sideBar'
 function Profil() {
   return (
     <div>
-        sidebar
+        <SideBar active={2} type={true}/>
     </div>
   )
 }
